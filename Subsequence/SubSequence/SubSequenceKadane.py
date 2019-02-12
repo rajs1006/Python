@@ -27,7 +27,7 @@ class SubSequenceKadane(SubSeq):
                     start = s
                     end = i
 
-                if max_current < 0:
+                if max_current < 0  or len(current_list) >= self.max_len:
                     current_list.clear()
                     max_current = 0
                     s = i + 1
