@@ -16,7 +16,8 @@ SubSequenceMerantix.py : working algorithm is written here.
 ** Notes: 
 
 Kadane's algorithm is faster when the input list is mix of NEGATIVE and POSITIVE numbers so can be used in such cases.
-command to run kadane:                                              									
+command to run kadane:
+
 ==>>	python3 find_subsequence.py data/input_1.txt 4 values kadane
        
 
