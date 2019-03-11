@@ -10,16 +10,13 @@ class WordAverage:
     def __init__(self, input_file):
         self.input_file = input_file
 
-    def get_input(self):
-        return self.input_list
-
     def word_avg(self):
         # Starting Spark.
         spark = sess.builder.appName("wordcount").getOrCreate();
-        # '../trainingUrls'
+        # prepare input list from data file
         input_list = spark.read.text(self.input_file).rdd \
             .map(lambda r: re.split(SVMConstants.DATA_LABEL_SPLITTER, r[0])[0])
-
+        # Process words from URL
         words = input_list \
             .flatMap(lambda url: re.split(SVMConstants.URL_SPLITTER, url)) \
             .filter(lambda w: len(w) > 0)

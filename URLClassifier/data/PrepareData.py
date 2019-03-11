@@ -4,7 +4,6 @@ import numpy as np
 from pyspark.mllib.linalg import Vectors
 from pyspark.sql import SparkSession as Session
 
-from data.PlotData import PlotData
 from utils import SVMConstants
 
 
@@ -20,11 +19,17 @@ class Data:
 
     @staticmethod
     def __create_matrix__(self, data):
+        # Average of words in URL
         word_avg = np.sum(
             [np.sum([k for l in re.split(SVMConstants.URL_SPLITTER, data) if g == l]) for g, k in
              self.avg_word_weight])
-        word_count = sum([len(l) for l in re.split(SVMConstants.URL_SPLITTER, data)])
-        return Vectors.dense([word_avg, word_count])
+        # Length average of url
+        word_count = np.sum(
+            [[1, len(l)] for l in re.split(SVMConstants.URL_SPLITTER, data) if len(l) > 0],
+            axis=0)
+        word_count_avg = word_count[0] / word_count[1]
+
+        return Vectors.dense([word_avg, word_count_avg])
 
     def train_data(self, input_file):
         # Starting Spark.
@@ -41,8 +46,7 @@ class Data:
 
         # Spark stop
         spark.stop()
-        # Plot data
-        PlotData().plot_data(self, X, y)
+
         return X, y
 
     def test_data(self, data):
