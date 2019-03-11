@@ -10,13 +10,12 @@ def main():
     # Fetch input parameters.
     args = return_args()
 
-    test_input = args.test_data_url;
+    test_input = args.test_data_url
 
     X, y, x = Data.load_data(args.training_data_file, test_input)
     # Plot data
     Plot.plot_data(X, y)
     # SVM model.
-    # support_vectors, count = SVM().fit(X, y)
     model = SVMClassifier().train(X, y)
     # print training details
     print('\nmodel.X: {}\nmodel.y: {}\nmodel.alphas: {}\nmodel.w: {}\n'
