@@ -6,3 +6,6 @@ Python projects
     
 ***URLClassifier:
     Implementation of SVM-SMO algorithm using PySpark for data processing
+
+***Recommendor:
+    Implementation of colaborative filtering for recommendor system (Work in progress)
