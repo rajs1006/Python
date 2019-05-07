@@ -61,8 +61,8 @@ if __name__ == '__main__':
     # Train the optimizer
     train()
     np.mean(X, axis=0)
-    # p = X.dot(Theta.T)
-    p = np.reshape(np.mean(Theta, axis=0), (10, 1)).dot(np.reshape(np.mean(Theta, axis=0), (1, 10)))
+    p = X.dot(Theta.T)
+    #p = np.reshape(np.mean(Theta, axis=0), (10, 1)).dot(np.reshape(np.mean(Theta, axis=0), (1, 10)))
     myPredictions = np.reshape(p[:, 0], (len(p), 1)) + YMean
 
     sortedIndex = np.argsort(myPredictions, axis=0)[::-1]
