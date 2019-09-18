@@ -1,3 +1,4 @@
+
 This project has implementations of Classification models:
 	* SVM
 	* SVM-Stochastic Gradient along with Animation
