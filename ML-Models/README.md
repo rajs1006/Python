@@ -15,7 +15,7 @@ Notes:
 
 	* Data is not uploaded because of Copyright reasons
 	* For neural network simple sequential model has been used (1-by-1) as there was no relation 
-	  between itera-tags. But one can modify this model to use it for (n-by-1) models 
+	  between intra-tags. But one can modify this model to use it for (n-by-1) models 
 	  to use it for Sentence genaration.
 
 ****************************************************************************************************
