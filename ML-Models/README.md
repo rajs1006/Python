@@ -24,6 +24,7 @@ Apis:
     python3.7
     numpy
     pandas
+    matplotlib
     sklearn
     keras
     imblearn
