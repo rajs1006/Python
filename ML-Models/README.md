@@ -1,4 +1,4 @@
-This project has implementation of Classification models:
+This project has implementations of Classification models:
 	* SVM
 	* SVM-Stochastic Gradient along with Animation
 	* LSTM Model
