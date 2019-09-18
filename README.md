@@ -1,8 +1,9 @@
 # Python
-Python projects
+Python projects:
 
     ***ML-Models:
-        Implementation of multiple models (LSTM, SVM-StochasticGradient, naive-bayes etc, for classification based on Embeded           matrix (One-Hot-Encoding))
+        Implementation of multiple models (LSTM, SVM-StochasticGradient, naive-bayes etc, for classification 
+        based on Embeded matrix (One-Hot-Encoding))
 
     ***Subsequence: 
         Implementation of finding Max sum Subsequence in a series
