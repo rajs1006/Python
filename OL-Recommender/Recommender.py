@@ -20,22 +20,22 @@ def train():
     initialParam = np.concatenate((X, Theta)).ravel()
     lam = 10
 
-    options = {'maxiter': 100, 'disp': True}
+    options = {'maxiter': 1000, 'disp': True}
     args = (YNorm, R, numUser, numMovie, numFeature, lam)
     optimum = minimize(CollaborativeFilter.cost, initialParam, args=args, jac=CollaborativeFilter.gradient, method='CG',
                        options=options)
 
-    print('Optimal cost is {} '.format(optimum.fun))
+    print('Optimal cost is {} with status {} after {} iterations '.format(optimum.fun, optimum.success, optimum.nit))
     theta = optimum.x
     X = np.reshape(theta[0:numMovie * numFeature], (numMovie, numFeature))
     Theta = np.reshape(theta[numMovie * numFeature:], (numUser, numFeature))
-
+    print(X.shape, Theta)
 
 if __name__ == '__main__':
     # Load data to to train
     data = spi.loadmat('data')
     Y, R = data['Y'], data['R']
-
+    print(Y.shape, R.shape)
     movieList = FileReader('movie_ids.txt').read_file()
     myMovieRating = np.zeros((len(movieList), 1))
 
