@@ -1,0 +1,16 @@
+{
+    "cloudcode.last-used-context": {
+        "Run on Kubernetes": {
+            "kubeConfigPath": "/home/sraj/.kube/config",
+            "contextName": "gke_go-de-funkedigital_us-west1-b_customer-churn"
+        }
+    },
+    "cloudcode.profile-cluster-map": {
+        "cloudbuild": "gke_go-de-funkedigital_europe-west1-b_customer-churn",
+        "[default]": "gke_go-de-funkedigital_europe-west1-b_customer-churn-latest"
+    },
+    "cloudcode.profile-registry-map": {
+        "cloudbuild": "gcr.io/go-de-funkedigital",
+        "[default]": "gcr.io/go-de-funkedigital"
+    }
+}

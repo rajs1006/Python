@@ -1,0 +1,21 @@
+# This Service manifest defines:
+# - a load balancer for pods matching label "app: customer-churn"
+# - exposing the application to the public Internet (type:LoadBalancer)
+# - routes port 80 of the load balancer to the port 8080 of the Pods.
+# Syntax reference https://kubernetes.io/docs/concepts/configuration/overview/
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-churn-external
+  labels:
+    app: customer-churn
+    tier: app
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+  selector:
+    app: customer-churn
+    tier: app

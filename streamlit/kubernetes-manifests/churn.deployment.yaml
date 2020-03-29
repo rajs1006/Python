@@ -1,0 +1,33 @@
+# This Deployment manifest defines:
+# - single-replica deployment of the container image, with label "app: customer-churn"
+# - Pod exposes port 8080
+# - specify PORT environment variable to the container process
+# Syntax reference https://kubernetes.io/docs/concepts/configuration/overview/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-churn
+  labels:
+    app: customer-churn
+    tier: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customer-churn
+      tier: app
+  template:
+    metadata:
+      labels:
+        app: customer-churn
+        tier: app
+    spec:
+      containers:
+      - name: customer-churn
+        image: customer-churn
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+
