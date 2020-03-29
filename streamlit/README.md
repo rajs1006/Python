@@ -1,7 +1,5 @@
 # Hello World with Cloud Code
 
-![Architecture Diagram](./img/diagram.png)
-
 "Hello World" is a simple Kubernetes application that contains
 [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for a web server and a database, and corresponding
 [Services](https://kubernetes.io/docs/concepts/services-networking/service/). The Deployment contains a
@@ -13,31 +11,9 @@
 
 ### Cloud Code for Visual Studio Code
 
-1. [Getting Started](#getting-started])
-2. [What's in the box](https://cloud.google.com/code/docs/vscode/quickstart#whats_in_the_box)
-3. Using Cloud Code
-    * [Set up a Google Kubernetes Engine Cluster](https://cloud.google.com/code/docs/vscode/quickstart#creating_a_google_kubernetes_engine_cluster)
-    * [Deploy the app](https://cloud.google.com/code/docs/vscode/quickstart#deploying_your_app)
-    * [Continuous Deployment](https://cloud.google.com/code/docs/vscode/quickstart#initiating_continuous_deployment)
-    * [View Container Logs](https://cloud.google.com/code/docs/vscode/quickstart#viewing_container_logs)
-    * [Debug Your Code](https://cloud.google.com/code/docs/vscode/quickstart#debugging_your_application)
-    * [Open a Terminal in Your Container](https://cloud.google.com/code/docs/vscode/quickstart#opening_a_terminal_in_your_container)
-4. [Using the Command Line](#using-the-command-line)
+[Using the Command Line](#using-the-command-line)
     * [Skaffold](#using-skaffold)
     * [kubectl](#using-kubectl)
-
-----
-
-### Getting Started
-
-This sample was written to demonstrate how to use the Cloud Code extension for Visual Studio code.
-
-Please change [SECRET_KEY](./src/helloworld/settings.py#L28) as soon as possible. The application will run successfully even if you keep
-its value unchanged, but your application will be vulnerable from security issues. For example, privilege escalation and remote code execution. See [link](https://docs.djangoproject.com/en/2.2/ref/settings/#secret-key) for more details.
-
-* [Install Cloud Code for VS Code](https://cloud.google.com/code/docs/vscode/install)
-* [Creating a new app](https://cloud.google.com/code/docs/vscode/creating-an-application)
-* [Editing YAML files](https://cloud.google.com/code/docs/vscode/yaml-editing)
 
 ----
 
