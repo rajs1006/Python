@@ -12,4 +12,10 @@ Python projects:
         Implementation of SVM-SMO algorithm using PySpark for data processing
 
     ***Recommendor:
-        Implementation of colaborative filtering for recommendor system (Work in progress)
+        Implementation of colaborative filtering for recommendor system
+        
+    ***DeepNN:
+        Implementation of Computer Vision and Neural Network related Algorithms.
+        
+    ***Streamlit:
+        A dashboard usng stremlit API.
